@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~font-awesome/scss/font-awesome';
+
+@import 'variables';
+@import 'mixins';
+@import 'libs-override';
+@import 'theme';
+@import 'base';
+
+@import '~bootstrap/scss/bootstrap';
+@import '~@swimlane/ngx-datatable/themes/material.css';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+@import 'card-overwrite';
+@import 'bootstrap-override';
+@import '~@ng-select/ng-select/themes/default.theme.css';
+
+// @import '~@angular/cdk/overlay-prebuilt.css';
+
+@import 'fonts';
+@import '~ngx-toastr/toastr';
+@import '~ngx-toastr/toastr-bs4-alert';

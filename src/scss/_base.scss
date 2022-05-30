@@ -1,0 +1,246 @@
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $primary-color;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: $dark-primary-color;
+}
+
+.app {
+  background-color: $main-bg-color;
+  height: 100%;
+
+  .wrapper {
+    height: 100%;
+  }
+
+  &.navbar-fixed {
+    .wrapper-inner {
+      // padding-top: $top-navbar-height;
+    }
+  }
+
+  &.sidebar-fixed {
+    .main-content {
+      padding-left: $sidebar-width + 25px;
+    }
+
+    .app-footer {
+      padding-left: $sidebar-width + 25px;
+      z-index: 1;
+    }
+
+    .sidebar-outer {
+      position: fixed;
+      top: 0;
+      // padding-bottom: $top-navbar-height;
+
+      .logo {
+        width: $sidebar-width;
+        font-family: $logo-font;
+        font-size: 27px;
+        display: inline-block;
+        height: 70px;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: initial;
+        }
+
+        .app-logo {
+          background: url('/assets/images/logo.png') center center no-repeat;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &.mini {
+      .main-content,
+      .app-footer {
+        padding-left: $sidebar-mini-width + 25px;
+      }
+    }
+
+    &.menu-hide {
+      .main-content,
+      .app-footer {
+        padding-left: 25px;
+      }
+    }
+  }
+
+  &.mini {
+    .home-side-bar {
+      width: $sidebar-mini-width;
+    }
+    .navbar.app-header .top-navbar .logo {
+      width: $sidebar-mini-width - 15px;
+
+      .start {
+        display: none;
+      }
+    }
+
+    .sidebar-outer {
+      width: $sidebar-mini-width;
+
+      .logo {
+        width: $sidebar-mini-width;
+
+        .app-logo {
+          background-image: url('/assets/images/logo-mini.png');
+        }
+
+        .start {
+          display: none;
+        }
+      }
+
+      .image-div {
+        .user-name-wrapper {
+          display: none;
+        }
+
+        .menu-toggler {
+          padding-left: 5px;
+        }
+      }
+
+      a.menu-item-link {
+        padding-left: 0 !important;
+        text-align: center;
+        width: $sidebar-mini-width;
+        display: flex;
+
+        span.menu-title {
+          display: none;
+        }
+
+        i {
+          display: block;
+          font-size: 16px;
+          padding: 4px 10px;
+        }
+
+        b.fa {
+          display: none;
+        }
+
+        b {
+          position: absolute;
+          margin: 0;
+          right: 8px;
+          top: 20px;
+        }
+
+        &:hover {
+          + .sub-menu-item {
+            position: absolute;
+            // top: 0;
+            left: 37px;
+            z-index: 999999;
+            background: $sidebar-bg-color;
+            width: 250px;
+            visibility: visible;
+            opacity: 1;
+            max-height: inherit;
+            transition: none;
+
+            a.menu-item-link {
+              background: $sidebar-bg-color;
+              z-index: 999999;
+              width: 100%;
+
+              span.menu-title {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .logout {
+        width: $sidebar-mini-width;
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.menu-hide {
+    .navbar.app-header .top-navbar .logo {
+      width: 55px !important;
+
+      .start {
+        display: none;
+      }
+    }
+
+    .sidebar-outer {
+      width: 0;
+
+      .menu-wrapper {
+        display: none;
+      }
+
+      .logo {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.w-50p {
+  width: 50px;
+}
+
+.w-100p {
+  width: 100px;
+}
+
+.h-100p {
+  height: 100px;
+}
+
+.w-280p {
+  width: 280px;
+}
+
+.h-300p {
+  height: 300px;
+}
+
+.pt-2p {
+  padding-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .app {
+    overflow-x: hidden;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .card-columns {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+}
