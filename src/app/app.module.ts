@@ -8,11 +8,17 @@ import { AppComponent } from './app.component';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { SharedModule } from './shared/shared.module';
 import { ToastrModule } from 'ngx-toastr';
-
-// import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    PageNotFoundComponent,
+  ],
   imports: [
     CommonModule,
     BrowserModule,
